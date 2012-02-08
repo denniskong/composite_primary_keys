@@ -2,7 +2,8 @@ require 'active_record/connection_adapters/sqlite_adapter'
 
 module ActiveRecord
   module ConnectionAdapters #:nodoc:
-    class SQLite3Adapter < SQLiteAdapter # :nodoc:
+    PARENT = defined?(JRuby) ? JdbcAdapter : SQLiteAdapter
+    class SQLite3Adapter < PARENT # :nodoc:
       def supports_count_distinct? #:nodoc:
         false
       end
