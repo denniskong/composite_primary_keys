@@ -1,7 +1,7 @@
 module ActiveRecord
   module ConnectionAdapters
-    PARENT = defined?(JRuby) ? JdbcAdapter : AbstractAdapter
-    class PostgreSQLAdapter < PARENT
+    PSQLPARENT = defined?(JRuby) ? JdbcAdapter : AbstractAdapter
+    class PostgreSQLAdapter < PSQLPARENT
       
       # This mightn't be in Core, but count(distinct x,y) doesn't work for me
       def supports_count_distinct? #:nodoc:
