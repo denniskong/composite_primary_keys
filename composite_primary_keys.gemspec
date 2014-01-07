@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{composite_primary_keys}
-  s.version = "2.3.5.2.20140107163821"
+  s.version = "2.3.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dr Nic Williams"]
